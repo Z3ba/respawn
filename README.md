@@ -4,13 +4,15 @@ Mobilna prodavnica gaming opreme - Kontrolna tačka 1, Mobilne informacione tehn
 
 **Autor:** David Zejbeki, IT27/2024.
 
-**GitHub:** https://github.com/Z3ba/respawn (privatni repozitorijum; pristup predmetnom asistentu dodeliti pre predaje).
+**GitHub:** https://github.com/Z3ba/respawn (javni repozitorijum).
+
+Android debug APK je uspešno izgrađen i potpis proveren. Lokalna kopija je u `output/android/respawn-kt1-debug.apk`; njeni metapodaci su u `docs/apk-metadata.json`. Pokretanje na telefonu/emulatoru još nije potvrđeno: virtualizacija je isključena u firmware-u računara, a softverski emulator nije postao dostupan.
 
 ## Trenutno stanje
 
 KT1 sadrži početnu Flutter aplikaciju sa četiri sekcije, praznim stanjima i pamćenjem teme, Express servis sa `/health`, domenske modele, dokumentaciju i lokalni UI/UX prototip. Firebase, stvarni katalog, nalozi, administracija i checkout još nisu implementirani. Stripe je planiran u test režimu uz plaćanje pouzećem.
 
-Prototip prikazuje **planirani izgled i izmišljene primere proizvoda**; ti podaci nisu ugrađeni u mobilnu aplikaciju. GitHub repozitorijum je napravljen. Figma URL još nije dostupan jer pristup nalogu nije uspostavljen. Status predaje: [docs/submission-checklist.md](docs/submission-checklist.md).
+Prototip prikazuje **planirani izgled i izmišljene primere proizvoda**; ti podaci nisu ugrađeni u mobilnu aplikaciju. GitHub repozitorijum je javan. Za KT1 je izabran lokalni prototip; Figma je odložena za kasniju fazu. Status predaje: [docs/submission-checklist.md](docs/submission-checklist.md).
 
 ## Organizacija
 
@@ -32,7 +34,7 @@ output/pdf/             Dokument za pregled/predaju
 
 ## Mobilna aplikacija
 
-Preduslovi: Flutter stable, Android Studio/Android SDK i emulator ili povezan Android telefon. Flutter SDK nije deo Git repozitorijuma. Ako postoji lokalna instalacija u `.tools/flutter`, koristi `.\scripts\flutter.ps1` iz korena projekta; ona ne menja globalni PATH i čuva paketni keš lokalno.
+Preduslovi: Flutter stable (provereno 3.47.9 / Dart 3.13.7), pun JDK 21, Android SDK i emulator ili povezan Android telefon. Flutter SDK nije deo Git repozitorijuma. Ako postoji lokalna instalacija u `.tools/flutter`, koristi `.\scripts\flutter.ps1` iz korena projekta; ona ne menja globalni PATH i čuva paketni keš lokalno.
 
 ```powershell
 cd mobile
@@ -44,7 +46,20 @@ flutter run -d <ANDROID_DEVICE_ID>
 flutter build apk --debug
 ```
 
+Na ovom računaru Android SDK, pun Temurin JDK 21 i Gradle keš nalaze se u `D:\RespawnTools`. Za novu terminalsku sesiju iz korena projekta:
+
+```powershell
+.\scripts\use-android.ps1 -UseWindowsTrustStore
+.\scripts\flutter.ps1 analyze --no-pub
+.\scripts\flutter.ps1 test --no-pub
+.\scripts\flutter.ps1 build apk --debug --no-pub
+```
+
+`-UseWindowsTrustStore` koristi postojeće pouzdane Windows sertifikate u trenutnom procesu; TLS provera ostaje uključena. Lokalni `mobile/build` je junction ka `D:\RespawnTools\build\mobile`, zbog malog slobodnog prostora na C:. SDK i build izlazi se ne šalju na GitHub.
+
 Za pregled na računaru: `flutter run -d chrome`. Web pregled nije zamena za proveru Android aplikacije. Trenutni HTTP klijent je pripremljen, ali UI još ne poziva backend.
+
+Za instalaciju Android alata pripremljena je `scripts/setup-android.ps1`. Ona zahteva putanju do JDK-a i izričito prihvatanje Android SDK licence preko `-AcceptSdkLicense`; `-IncludeEmulator` dodaje emulator i AOSP sistemsku sliku. Podrazumevani direktorijum je `D:\RespawnTools`. Korisnik je potvrdio SDK licencu; status instalacije i Android provere nalazi se u docs/validation.md.
 
 ## Backend
 

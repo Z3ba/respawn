@@ -60,7 +60,7 @@ class Cover(Flowable):
                 c.roundRect(col*37,233-row*27,30,20,4,fill=1,stroke=0)
         c.setFillColor(colors.white);c.setFont('Respawn-Bold',17);c.drawString(0,118,self.metadata['student'])
         c.setFillColor(colors.HexColor('#B7B3C5'));c.setFont('Respawn',12);c.drawString(0,93,self.metadata['index'])
-        c.setFillColor(colors.HexColor('#BDA4FF'));c.setFont('Respawn-Bold',9);c.drawString(0,33,'NACRT ZA PREGLED - FIGMA I ANDROID PROVERA NA ČEKANJU')
+        c.setFillColor(colors.HexColor('#BDA4FF'));c.setFont('Respawn-Bold',9);c.drawString(0,33,'KONTROLNA TAČKA 1 - INICIJALNI PROJEKAT' if self.metadata.get('androidBuildPassed') else 'NACRT ZA PREGLED - ANDROID BUILD U TOKU')
 
 class DesignOverview(Flowable):
     width=CONTENT
@@ -93,9 +93,9 @@ def main():
     source=(ROOT/'docs/KT1-IT27-2024.md').read_text(encoding='utf-8')
     validation=(ROOT/'docs/validation-summary.txt').read_text(encoding='utf-8') if (ROOT/'docs/validation-summary.txt').exists() else 'Provere su u toku. Dokument nije spreman za predaju.'
     replacements={
-        '{{DOCUMENT_STATUS}}':'Nacrt za pregled; Figma objava i Android provera na čekanju.',
+        '{{DOCUMENT_STATUS}}':'KT1 - inicijalni projekat; Android APK izgrađen, pokretanje na uređaju preostaje.' if metadata.get('androidBuildPassed') else 'Nacrt za pregled; Android build je u toku.',
         '{{VALIDATION_SUMMARY}}':validation,
-        '{{FIGMA_URL}}':metadata['figmaUrl'] or 'Nije objavljen - potreban je pristup Figma nalogu.',
+        '{{FIGMA_URL}}':metadata['figmaUrl'] or 'Planiran za kasniju fazu; KT1 koristi lokalni prototip.',
         '{{GITHUB_URL}}':metadata['githubUrl'] or 'Nije objavljen - stvarni link treba dodati pre predaje.',
     }
     for key,value in replacements.items():source=source.replace(key,value)

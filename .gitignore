@@ -1,5 +1,6 @@
 .tools/
 tmp/
+/output/android/
 node_modules/
 .env
 .env.*

@@ -5,5 +5,9 @@
   "documentName": "KT1-IT27-2024.pdf",
   "githubUrl": "https://github.com/Z3ba/respawn",
   "figmaUrl": null,
-  "githubVisibility": "private"
+  "githubVisibility": "public",
+  "prototypeMode": "local",
+  "androidVerified": false,
+  "androidBuildPassed": true,
+  "androidRunStatus": "Emulator ostaje offline; virtualizacija je isključena u firmware-u. Potrebna provera na fizičkom uređaju ili posle podešavanja emulatora."
 }
