@@ -1,0 +1,17 @@
+.tools/
+tmp/
+node_modules/
+.env
+.env.*
+!.env.example
+*service-account*.json
+*serviceAccount*.json
+firebase-adminsdk*.json
+*.jks
+*.keystore
+mobile/android/key.properties
+mobile/android/local.properties
+mobile/lib/firebase_options.dart
+mobile/android/app/google-services.json
+.DS_Store
+Thumbs.db
