@@ -56,3 +56,7 @@ Iz korena projekta: scripts/use-android.ps1 -UseWindowsTrustStore, zatim scripts
 ## Dopuna dokumentacije 12.11.2026.
 
 PDF je reorganizovan po dogovorenom KT1 planu i prikazan u akademskom stilu po KT3 primeru, uz sadržaj sa automatskim brojevima stranica. Dodati su prikaz strukture i dva rendera početne aplikacije. Izvoz rendera je uspešno izvršen Flutter test renderer-om, sa Roboto i MaterialIcons fontovima. Prezentacija MIT_Vezbe2.pptx.pdf pregledana je tekstualno i vizuelno; beleška o alatima i statusu primera paketa uključena je u poglavlje 2. Završni dokument ima 10 PDF stranica, odnosno naslovnu, sadržaj i osam numerisanih stranica. Svi listovi renderovani su i vizuelno pregledani. Aktuelni izlaz: output/kt1/KT1-IT27-2024.pdf.
+
+### Ispravka strukture prema KT3 primeru
+
+Nazivi i redosled glavnih poglavlja usklađeni su sa KT3 primerom (1-5). Definicije i uloge su u poglavlju 3, struktura i modeli u poglavlju 4, a prikazi ekrana u poglavlju 5. Izvori su zaseban završni dodatak. PDF ima 13 strana: naslovna, sadržaj i 11 numerisanih stranica. Provereni su prelom, automatski sadržaj, prikazi i završni link.

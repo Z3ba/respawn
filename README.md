@@ -98,3 +98,5 @@ Tajne se čuvaju van repozitorijuma. Primer konfiguracije ne sadrži stvarne klj
 Dokument prati dogovoreni obim: namena i koncept, tehnologije, inicijalni projekat, početni UI/UX koncept i izvori. Sadržaj se automatski izračunava. Aktuelni PDF je `output/kt1/KT1-IT27-2024.pdf`; ranije varijante u output/pdf su lokalne prethodne kopije. Prezentacija MIT_Vezbe2.pptx.pdf uzeta je kao izvor za Flutter razvojno okruženje, bez proglašavanja primera paketa obaveznim projektnim zahtevima.
 
 Prikazi Početne i Profila u dokumentu renderovani su iz stvarnog Flutter koda; nisu Android screenshot-ovi. Za osvežavanje prikaza, posle web build-a iz korena projekta pokrenuti `scripts/flutter.ps1 test --no-pub ../docs/tools/capture_initial_app_test.dart`. Potom pokrenuti `python docs/tools/build_document.py`.
+
+Aktuelna struktura dokumentacije prati poglavlja 1-5 KT3 primera: Uvod; Opis problema i motivacija; Opis korišćenog tehnološkog steka; Arhitektura sistema (Opis implementacije); Funkcionalnosti aplikacije (Prikaz i opis). Izvori i GitHub link su na kraju. Implementirane i planirane funkcionalnosti su posebno označene.

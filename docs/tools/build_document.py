@@ -138,7 +138,7 @@ def main():
         ]));return result
     blocks=source.split('<!-- PAGE -->')[1:]
     toc=TableOfContents()
-    toc.levelStyles=[ParagraphStyle('TOC0',fontName='Respawn',fontSize=12,leading=18,spaceBefore=8),ParagraphStyle('TOC1',fontName='Respawn',fontSize=11,leading=15,leftIndent=16)]
+    toc.levelStyles=[ParagraphStyle('TOC0',fontName='Respawn',fontSize=11.5,leading=15,spaceBefore=6),ParagraphStyle('TOC1',fontName='Respawn',fontSize=10.5,leading=12,leftIndent=16)]
     story=[Cover(metadata),NextPageTemplate('toc'),PageBreak(),Paragraph('Sadržaj',ParagraphStyle('ContentsTitle',fontName='Respawn-Bold',fontSize=20,leading=26,spaceAfter=20)),toc,NextPageTemplate('body'),PageBreak()]
     for block_number,block in enumerate(blocks):
         source_lines=block.strip().splitlines();i=0
