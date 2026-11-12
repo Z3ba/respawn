@@ -9,5 +9,7 @@
   "prototypeMode": "local",
   "androidVerified": false,
   "androidBuildPassed": true,
-  "androidRunStatus": "Emulator ostaje offline; virtualizacija je isključena u firmware-u. Potrebna provera na fizičkom uređaju ili posle podešavanja emulatora."
+  "androidRunStatus": "Emulator ostaje offline; virtualizacija je isključena u firmware-u. Potrebna provera na fizičkom uređaju ili posle podešavanja emulatora.",
+  "documentDirectory": "output/kt1",
+  "documentationUpdated": "2026-11-12"
 }

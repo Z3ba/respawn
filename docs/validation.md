@@ -52,3 +52,7 @@ Javni repozitorijum: https://github.com/Z3ba/respawn. Grana codex/kt1-respawn je
 ## Ponovna provera
 
 Iz korena projekta: scripts/use-android.ps1 -UseWindowsTrustStore, zatim scripts/flutter.ps1 analyze --no-pub, scripts/flutter.ps1 test --no-pub i scripts/flutter.ps1 build apk --debug --no-pub. U backend direktorijumu: npm ci, npm test i npm start. PDF/SVG zavisnosti su navedene u docs/tools/requirements.txt.
+
+## Dopuna dokumentacije 12.11.2026.
+
+PDF je reorganizovan po dogovorenom KT1 planu i prikazan u akademskom stilu po KT3 primeru, uz sadržaj sa automatskim brojevima stranica. Dodati su prikaz strukture i dva rendera početne aplikacije. Izvoz rendera je uspešno izvršen Flutter test renderer-om, sa Roboto i MaterialIcons fontovima. Prezentacija MIT_Vezbe2.pptx.pdf pregledana je tekstualno i vizuelno; beleška o alatima i statusu primera paketa uključena je u poglavlje 2. Završni dokument ima 10 PDF stranica, odnosno naslovnu, sadržaj i osam numerisanih stranica. Svi listovi renderovani su i vizuelno pregledani. Aktuelni izlaz: output/kt1/KT1-IT27-2024.pdf.

@@ -29,7 +29,7 @@ backend/                Express servis i testovi
 docs/                   Tehnički dokument, koncept i provere
 docs/design/            Lokalni interaktivni prototip i SVG ekrani
 docs/tools/             Ponovljiva izrada prototipa i PDF-a
-output/pdf/             Dokument za pregled/predaju
+output/kt1/             Dokument za pregled/predaju
 ```
 
 ## Mobilna aplikacija
@@ -80,7 +80,7 @@ Odgovor: `{"status":"ok","service":"respawn-api","version":"0.1.0"}`. Backend po
 ## Dokumentacija i prototip
 
 - Izvor teksta: `docs/KT1-IT27-2024.md`.
-- PDF: `output/pdf/KT1-IT27-2024.pdf`.
+- PDF: `output/kt1/KT1-IT27-2024.pdf`.
 - Prototip: otvori `docs/design/index.html` u pregledaču. Ne traži server niti pristup internetu.
 - SVG ekrani: `docs/design/screens/`. Mogu se uvesti u Figmu kao početni uređivi vizuelni materijal; lokalni HTML linkovi se ne pretvaraju automatski u Figma interakcije.
 - Rezultati provera: `docs/validation.md`.
@@ -92,3 +92,9 @@ Ponovna izrada: Python sa paketima `reportlab` i `Pillow`, zatim `python docs/to
 Firebase Authentication i Firestore; serverska autorizacija i administracija; CRUD proizvoda, korisnički profil, korpa i omiljeno; checkout pouzećem; Stripe PaymentSheet i verifikovani webhook. Podatke o cenama server čita iz baze, a kartični podaci se ne čuvaju u našoj aplikaciji.
 
 Tajne se čuvaju van repozitorijuma. Primer konfiguracije ne sadrži stvarne ključeve. Korisnička uloga dolazi iz pouzdanog serverskog izvora; lokalni izbor ekrana nije autorizacija.
+
+## Dokumentacija KT1 - dopuna 12.11.2026.
+
+Dokument prati dogovoreni obim: namena i koncept, tehnologije, inicijalni projekat, početni UI/UX koncept i izvori. Sadržaj se automatski izračunava. Aktuelni PDF je `output/kt1/KT1-IT27-2024.pdf`; ranije varijante u output/pdf su lokalne prethodne kopije. Prezentacija MIT_Vezbe2.pptx.pdf uzeta je kao izvor za Flutter razvojno okruženje, bez proglašavanja primera paketa obaveznim projektnim zahtevima.
+
+Prikazi Početne i Profila u dokumentu renderovani su iz stvarnog Flutter koda; nisu Android screenshot-ovi. Za osvežavanje prikaza, posle web build-a iz korena projekta pokrenuti `scripts/flutter.ps1 test --no-pub ../docs/tools/capture_initial_app_test.dart`. Potom pokrenuti `python docs/tools/build_document.py`.
