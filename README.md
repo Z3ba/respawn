@@ -29,7 +29,7 @@ backend/                Express servis i testovi
 docs/                   Tehnički dokument, koncept i provere
 docs/design/            Lokalni interaktivni prototip i SVG ekrani
 docs/tools/             Ponovljiva izrada prototipa i PDF-a
-output/kt1/             Dokument za pregled/predaju
+output/kt1-final/       Dokument za pregled/predaju
 ```
 
 ## Mobilna aplikacija
@@ -80,7 +80,7 @@ Odgovor: `{"status":"ok","service":"respawn-api","version":"0.1.0"}`. Backend po
 ## Dokumentacija i prototip
 
 - Izvor teksta: `docs/KT1-IT27-2024.md`.
-- PDF: `output/kt1/KT1-IT27-2024.pdf`.
+- PDF: `output/kt1-final/KT1-IT27-2024.pdf`.
 - Prototip: otvori `docs/design/index.html` u pregledaču. Ne traži server niti pristup internetu.
 - SVG ekrani: `docs/design/screens/`. Mogu se uvesti u Figmu kao početni uređivi vizuelni materijal; lokalni HTML linkovi se ne pretvaraju automatski u Figma interakcije.
 - Rezultati provera: `docs/validation.md`.
@@ -95,8 +95,8 @@ Tajne se čuvaju van repozitorijuma. Primer konfiguracije ne sadrži stvarne klj
 
 ## Dokumentacija KT1 - dopuna 12.11.2026.
 
-Dokument prati dogovoreni obim: namena i koncept, tehnologije, inicijalni projekat, početni UI/UX koncept i izvori. Sadržaj se automatski izračunava. Aktuelni PDF je `output/kt1/KT1-IT27-2024.pdf`; ranije varijante u output/pdf su lokalne prethodne kopije. Prezentacija MIT_Vezbe2.pptx.pdf uzeta je kao izvor za Flutter razvojno okruženje, bez proglašavanja primera paketa obaveznim projektnim zahtevima.
+Dokument prati dogovoreni obim: namena i koncept, tehnologije, inicijalni projekat i početni UI/UX koncept. Sadržaj se automatski izračunava. Aktuelni PDF je `output/kt1-final/KT1-IT27-2024.pdf`; ranije varijante u output/kt1 i output/pdf su lokalne prethodne kopije. Prezentacija MIT_Vezbe2.pptx.pdf uzeta je kao izvor za Flutter razvojno okruženje, bez proglašavanja primera paketa obaveznim projektnim zahtevima.
 
 Prikazi Početne i Profila u dokumentu renderovani su iz stvarnog Flutter koda; nisu Android screenshot-ovi. Za osvežavanje prikaza, posle web build-a iz korena projekta pokrenuti `scripts/flutter.ps1 test --no-pub ../docs/tools/capture_initial_app_test.dart`. Potom pokrenuti `python docs/tools/build_document.py`.
 
-Aktuelna struktura dokumentacije prati poglavlja 1-5 KT3 primera: Uvod; Opis problema i motivacija; Opis korišćenog tehnološkog steka; Arhitektura sistema (Opis implementacije); Funkcionalnosti aplikacije (Prikaz i opis). Izvori i GitHub link su na kraju. Implementirane i planirane funkcionalnosti su posebno označene.
+Aktuelna struktura dokumentacije prati poglavlja 1-5 KT3 primera: Uvod; Opis problema i motivacija; Opis korišćenog tehnološkog steka; Arhitektura sistema (Opis implementacije); Funkcionalnosti aplikacije (Prikaz i opis). Zaseban dodatak sa izvorima i materijalima je uklonjen na zahtev autora; GitHub link je poslednja stavka zbog uslova predaje. Implementirane i planirane funkcionalnosti su posebno označene.

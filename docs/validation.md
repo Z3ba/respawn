@@ -60,3 +60,7 @@ PDF je reorganizovan po dogovorenom KT1 planu i prikazan u akademskom stilu po K
 ### Ispravka strukture prema KT3 primeru
 
 Nazivi i redosled glavnih poglavlja usklađeni su sa KT3 primerom (1-5). Definicije i uloge su u poglavlju 3, struktura i modeli u poglavlju 4, a prikazi ekrana u poglavlju 5. Izvori su zaseban završni dodatak. PDF ima 13 strana: naslovna, sadržaj i 11 numerisanih stranica. Provereni su prelom, automatski sadržaj, prikazi i završni link.
+
+### Završna izmena po zahtevu autora
+
+Uklonjen je ceo dodatak „Izvori i materijali za predaju“, uključujući spisak izvora i opis materijala. Na kraju poglavlja 5 ostao je samo stvarni GitHub link, kao stavka za predaju KT1. Novi PDF ima 12 strana: naslovnu, sadržaj i 10 numerisanih stranica. Završna strana je renderovana i vizuelno proverena. Pošto je prethodni PDF bio otvoren u drugom programu i zaključan, aktuelni izlaz se nalazi u `output/kt1-final/KT1-IT27-2024.pdf`; prethodna kopija u `output/kt1` nije aktuelna.

@@ -165,7 +165,7 @@ def main():
                 story.append(para(' '.join(paragraph)))
             i+=1
         if block_number<len(blocks)-1:story.append(PageBreak())
-    out=ROOT/'output/kt1'/metadata['documentName'];out.parent.mkdir(parents=True,exist_ok=True)
+    out=ROOT/metadata['documentDirectory']/metadata['documentName'];out.parent.mkdir(parents=True,exist_ok=True)
     doc=AcademicDocument(str(out),pagesize=A4,title='Respawn - Kontrolna tačka 1',author=metadata['student'],
                         subject='Mobilne informacione tehnologije - koncept i početni projekat')
     frame=Frame(MARGIN,48,CONTENT,HEIGHT-109,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)

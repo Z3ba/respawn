@@ -17,5 +17,6 @@ mobile/android/app/google-services.json
 .DS_Store
 Thumbs.db
 
-# Previous locally opened PDF versions; current document is in output/kt1.
+# Previous locally opened PDF versions; current document is in output/kt1-final.
 /output/pdf/
+/output/kt1/

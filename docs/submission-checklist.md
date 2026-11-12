@@ -12,6 +12,6 @@
 - [x] Lokalni prototip: 14 povezanih ekrana i uređivi SVG materijali. Figma je dogovorom odložena.
 - [x] GitHub: početni commit objavljen i sadržaj proveren na javnom repozitorijumu.
 - [x] Unet stvarni GitHub link na poslednjoj strani PDF-a.
-- [x] PDF renderovan i vizuelno pregledan (10 strana).
+- [x] PDF renderovan i vizuelno pregledan (12 strana; bez dodatka sa izvorima i materijalima).
 
 Pre predaje proveriti pokretanje na Android uređaju. Figma je dogovorom odložena; lokalni prototip je završen.
